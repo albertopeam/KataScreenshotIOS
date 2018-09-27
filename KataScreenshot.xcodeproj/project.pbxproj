@@ -30,6 +30,8 @@
 		49CDFED91E2400830019961D /* SuperHeroTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49CDFED81E2400830019961D /* SuperHeroTableViewCell.xib */; };
 		49CDFEDD1E2402840019961D /* SuperHeroTableViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CDFEDC1E2402840019961D /* SuperHeroTableViewCellTests.swift */; };
 		49CDFEDF1E2403CB0019961D /* SuperHeroMother.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CDFEDE1E2403CB0019961D /* SuperHeroMother.swift */; };
+		C37C89E9215D2ACB00AF615E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37C89E8215D2ACB00AF615E /* Constants.swift */; };
+		C37C89EB215D2C6B00AF615E /* SuperHeroDetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37C89EA215D2C6B00AF615E /* SuperHeroDetailViewControllerTests.swift */; };
 		FC64759AD67A8E0D07F9DF6D /* Pods_KataScreenshotTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5509D4971E317467BCBF6C11 /* Pods_KataScreenshotTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +77,8 @@
 		4A529D7E99EF55AFA1218129 /* Pods-KataScreenshotTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KataScreenshotTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KataScreenshotTests/Pods-KataScreenshotTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4C52E23864CDE6FC17800AB6 /* Pods_KataScreenshot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KataScreenshot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5509D4971E317467BCBF6C11 /* Pods_KataScreenshotTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KataScreenshotTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C37C89E8215D2ACB00AF615E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C37C89EA215D2C6B00AF615E /* SuperHeroDetailViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHeroDetailViewControllerTests.swift; sourceTree = "<group>"; };
 		D15EB0AC3D833AA2F63CBCB6 /* Pods-KataScreenshot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KataScreenshot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KataScreenshot/Pods-KataScreenshot.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,6 +134,7 @@
 				4915B3991E0C25870056AE6A /* LaunchScreen.storyboard */,
 				4915B39C1E0C25870056AE6A /* Info.plist */,
 				4915B3DD1E0C27C10056AE6A /* ServiceLocator.swift */,
+				C37C89E8215D2ACB00AF615E /* Constants.swift */,
 			);
 			path = KataScreenshot;
 			sourceTree = "<group>";
@@ -223,6 +228,7 @@
 			children = (
 				49CDFEDA1E2402720019961D /* View */,
 				4915B3E41E0C29190056AE6A /* SuperHeroesViewControllerTests.swift */,
+				C37C89EA215D2C6B00AF615E /* SuperHeroDetailViewControllerTests.swift */,
 			);
 			name = "Super Heroes";
 			sourceTree = "<group>";
@@ -326,13 +332,11 @@
 				TargetAttributes = {
 					4915B38C1E0C25870056AE6A = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = BD48FG9BMV;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					4915B3B31E0C26340056AE6A = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = BD48FG9BMV;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						TestTargetID = 4915B38C1E0C25870056AE6A;
 					};
 				};
@@ -470,6 +474,7 @@
 				4915B3CC1E0C27180056AE6A /* GetSuperHeroByName.swift in Sources */,
 				4915B3CD1E0C27180056AE6A /* GetSuperHeroes.swift in Sources */,
 				4915B3C01E0C26BA0056AE6A /* UIColor.swift in Sources */,
+				C37C89E9215D2ACB00AF615E /* Constants.swift in Sources */,
 				4915B3C71E0C27030056AE6A /* SuperHero.swift in Sources */,
 				4915B3D81E0C27560056AE6A /* SuperHeroTableViewCell.swift in Sources */,
 			);
@@ -480,6 +485,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				49CDFEDF1E2403CB0019961D /* SuperHeroMother.swift in Sources */,
+				C37C89EB215D2C6B00AF615E /* SuperHeroDetailViewControllerTests.swift in Sources */,
 				4915B3E61E0C29190056AE6A /* SuperHeroesViewControllerTests.swift in Sources */,
 				49CDFEDD1E2402840019961D /* SuperHeroTableViewCellTests.swift in Sources */,
 				4915B3F21E0C2D130056AE6A /* ScreenshotTest.swift in Sources */,
@@ -607,11 +613,13 @@
 			baseConfigurationReference = D15EB0AC3D833AA2F63CBCB6 /* Pods-KataScreenshot.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = BD48FG9BMV;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = KataScreenshot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.karumi.KataScreenshot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -621,11 +629,13 @@
 			baseConfigurationReference = 4226A96F0DDBC63CB44010CB /* Pods-KataScreenshot.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = BD48FG9BMV;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = KataScreenshot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.karumi.KataScreenshot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -635,11 +645,13 @@
 			baseConfigurationReference = 4A529D7E99EF55AFA1218129 /* Pods-KataScreenshotTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = BD48FG9BMV;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = KataScreenshotTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.karumi.KataScreenshotTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KataScreenshot.app/KataScreenshot";
 			};
@@ -650,11 +662,13 @@
 			baseConfigurationReference = 1D782A2F87D5380C012EA891 /* Pods-KataScreenshotTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = BD48FG9BMV;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = KataScreenshotTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.karumi.KataScreenshotTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KataScreenshot.app/KataScreenshot";
 			};

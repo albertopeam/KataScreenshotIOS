@@ -29,7 +29,12 @@ class SuperHeroDetailViewController: KataSuperHeroesViewController, SuperHeroDet
         descriptionLabel.text = superHero.description
         descriptionLabel.accessibilityLabel = "Description: \(superHero.name)"
         descriptionLabel.isHidden = false
-        photoImageView.sd_setImage(with: superHero.photo as URL!)
+        if Constants.runningUITests {
+            //TODO: pending
+            photoImageView.image = UIImage(named: "")
+        }else{
+            photoImageView.sd_setImage(with: superHero.photo as URL!)
+        }
         avengersBadgeImageView.isHidden = !superHero.isAvenger
     }
 }
