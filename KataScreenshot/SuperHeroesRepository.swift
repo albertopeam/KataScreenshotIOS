@@ -109,10 +109,14 @@ class SuperHeroesRepository {
         }
     }
 
-    func getSuperHero(withName name: String, completion: @escaping (SuperHero?) -> ()) {
+    func getSuperHero(withName name: String, completion: @escaping (SuperHero?, SuperHeroError?) -> ()) {
         delay(1.5) {
             let superHeroByName = self.superHeroes.filter { $0.name == name }.first
-            completion(superHeroByName)
+            if superHeroByName != nil {
+                completion(superHeroByName, nil)
+            }else {
+                completion(nil, SuperHeroError.notFound)
+            }
         }
     }
 

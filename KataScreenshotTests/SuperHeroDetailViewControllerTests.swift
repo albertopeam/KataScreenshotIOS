@@ -11,7 +11,7 @@ import XCTest
 
 class SuperHeroDetailViewControllerTests: ScreenshotTest {
     
-    fileprivate let repository = MockSuperHeroesRepository()
+    fileprivate var repository = MockSuperHeroesRepository()
     
     override func setUp() {
         super.setUp()
@@ -77,6 +77,24 @@ class SuperHeroDetailViewControllerTests: ScreenshotTest {
         verify(viewController: viewController)
     }
     
+    // Spec 7. super hero not found
+    func test_given_hero_not_found_when_didload_then_verify_screenshot() {
+        givenErrorRepository(error: SuperHeroError.notFound)
+        
+        let viewController = openSuperHeroDetailViewController("not existing super hero")
+        
+        verify(viewController: viewController)
+    }
+    
+    // Spec 8. no internet connection
+    func test_given_no_network_when_didload_then_verify_screenshot() {
+        givenErrorRepository(error: SuperHeroError.noInternet)
+        
+        let viewController = openSuperHeroDetailViewController("network error")
+        
+        verify(viewController: viewController)
+    }
+    
     // PRAGMA: private
     
     fileprivate func givenASuperHeroWithName(name: String? = nil, description: String? = nil, _ isAvenger: Bool = false) -> SuperHero {
@@ -86,6 +104,12 @@ class SuperHeroDetailViewControllerTests: ScreenshotTest {
                                   description: description ?? "Description")
         repository.superHeroes = [superHero]
         return superHero
+    }
+    
+    fileprivate func givenErrorRepository(error: SuperHeroError) {
+        let mockRepositroy = MockSuperHeroesErrorRepository()
+        mockRepositroy.error = error
+        repository = mockRepositroy
     }
     
     fileprivate func openSuperHeroDetailViewController(_ superHeroName: String) -> SuperHeroDetailViewController{

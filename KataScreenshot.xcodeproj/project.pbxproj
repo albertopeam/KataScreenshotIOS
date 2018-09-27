@@ -32,6 +32,7 @@
 		49CDFEDF1E2403CB0019961D /* SuperHeroMother.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CDFEDE1E2403CB0019961D /* SuperHeroMother.swift */; };
 		C37C89E9215D2ACB00AF615E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37C89E8215D2ACB00AF615E /* Constants.swift */; };
 		C37C89EB215D2C6B00AF615E /* SuperHeroDetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37C89EA215D2C6B00AF615E /* SuperHeroDetailViewControllerTests.swift */; };
+		C37C89ED215D326B00AF615E /* SuperHeroError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37C89EC215D326B00AF615E /* SuperHeroError.swift */; };
 		FC64759AD67A8E0D07F9DF6D /* Pods_KataScreenshotTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5509D4971E317467BCBF6C11 /* Pods_KataScreenshotTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +80,7 @@
 		5509D4971E317467BCBF6C11 /* Pods_KataScreenshotTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KataScreenshotTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C37C89E8215D2ACB00AF615E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C37C89EA215D2C6B00AF615E /* SuperHeroDetailViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHeroDetailViewControllerTests.swift; sourceTree = "<group>"; };
+		C37C89EC215D326B00AF615E /* SuperHeroError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHeroError.swift; sourceTree = "<group>"; };
 		D15EB0AC3D833AA2F63CBCB6 /* Pods-KataScreenshot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KataScreenshot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KataScreenshot/Pods-KataScreenshot.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -174,6 +176,7 @@
 				4915B3C91E0C27080056AE6A /* Use Case */,
 				4915B3C51E0C27030056AE6A /* SuperHero.swift */,
 				4915B3C61E0C27030056AE6A /* SuperHeroesRepository.swift */,
+				C37C89EC215D326B00AF615E /* SuperHeroError.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -467,6 +470,7 @@
 				4915B3DC1E0C27A30056AE6A /* AppDelegate.swift in Sources */,
 				4915B3D11E0C272A0056AE6A /* SuperHeroesPresenter.swift in Sources */,
 				4915B3D51E0C27490056AE6A /* SuperHeroDetailViewController.swift in Sources */,
+				C37C89ED215D326B00AF615E /* SuperHeroError.swift in Sources */,
 				4915B3D61E0C27490056AE6A /* SuperHeroesViewController.swift in Sources */,
 				4915B3E11E0C27DA0056AE6A /* KataSuperHeroesViewController.swift in Sources */,
 				4915B3C81E0C27030056AE6A /* SuperHeroesRepository.swift in Sources */,

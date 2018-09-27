@@ -17,9 +17,19 @@ class MockSuperHeroesRepository: SuperHeroesRepository {
         completion(superHeroes)
     }
 
-    override func getSuperHero(withName name: String, completion: @escaping (SuperHero?) -> ()) {
+    override func getSuperHero(withName name: String, completion: @escaping (SuperHero?, SuperHeroError?) -> ()) {
         let superHeroByName = superHeroes.filter { $0.name == name }.first
-        completion(superHeroByName)
+        completion(superHeroByName, nil)
     }
 
 }
+
+class MockSuperHeroesErrorRepository: MockSuperHeroesRepository {
+    
+    var error:SuperHeroError!
+    
+    override func getSuperHero(withName name: String, completion: @escaping (SuperHero?, SuperHeroError?) -> ()) {
+        completion(nil, error)
+    }
+}
+
