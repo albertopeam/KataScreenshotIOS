@@ -99,7 +99,7 @@ class SuperHeroDetailViewControllerTests: ScreenshotTest {
     
     fileprivate func givenASuperHeroWithName(name: String? = nil, description: String? = nil, _ isAvenger: Bool = false) -> SuperHero {
         let superHero = SuperHero(name: name ?? "Mr. Clean",
-                                  photo: URL(string: "https://i.annihil.us/u/prod/marvel/i/mg/c/60/55b6a28ef24fa.jpg"),
+                                  photo: URL(string: ""),
                                   isAvenger: isAvenger,
                                   description: description ?? "Description")
         repository.superHeroes = [superHero]

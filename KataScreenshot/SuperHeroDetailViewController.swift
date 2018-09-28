@@ -32,8 +32,7 @@ class SuperHeroDetailViewController: KataSuperHeroesViewController, SuperHeroDet
         descriptionLabel.accessibilityLabel = "Description: \(superHero.name)"
         descriptionLabel.isHidden = false
         if Constants.runningUITests {
-            //TODO: pending
-            photoImageView.image = UIImage(named: "")
+            photoImageView.image = UIImage(named: "testing-hero")
         }else{
             photoImageView.sd_setImage(with: superHero.photo as URL!)
         }

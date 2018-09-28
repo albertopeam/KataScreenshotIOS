@@ -20,8 +20,7 @@ class SuperHeroTableViewCell: UITableViewCell, BothamViewCell {
     func configure(forItem item: SuperHero) {
         nameLabel.text = item.name
         if Constants.runningUITests {
-            //TODO: pending, maybe do a wrapper...
-            photoImageView.image = UIImage(named: "")
+            photoImageView.image = UIImage(named: "testing-hero")
         }else{
             photoImageView.sd_setImage(with: item.photo as URL!)
         }
